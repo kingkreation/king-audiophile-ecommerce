@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import { ConvexClientProvider } from '@/lib/ConvexClientProvider';
+import { CartProvider } from '@/lib/CartContext';
 
 export const metadata: Metadata = {
   title: 'Audiophile - Premium Audio Gear',
@@ -14,7 +16,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased">
-        {children}
+        <ConvexClientProvider>
+          <CartProvider>
+            {children}
+          </CartProvider>
+        </ConvexClientProvider>
       </body>
     </html>
   );
