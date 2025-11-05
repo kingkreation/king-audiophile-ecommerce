@@ -97,7 +97,7 @@ export default function CheckoutPage() {
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-peach focus:outline-none"
                         placeholder="Alexei Ward"
                         value={formData.name}
-                        onChange={(e) =>
+                        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                           setFormData({ ...formData, name: e.target.value })
                         }
                         required
@@ -110,7 +110,7 @@ export default function CheckoutPage() {
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-peach focus:outline-none"
                         placeholder="alexei@mail.com"
                         value={formData.email}
-                        onChange={(e) =>
+                        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                           setFormData({ ...formData, email: e.target.value })
                         }
                         required
@@ -123,7 +123,7 @@ export default function CheckoutPage() {
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-peach focus:outline-none"
                         placeholder="+1 202-555-0136"
                         value={formData.phone}
-                        onChange={(e) =>
+                        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                           setFormData({ ...formData, phone: e.target.value })
                         }
                         required
@@ -144,7 +144,7 @@ export default function CheckoutPage() {
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-peach focus:outline-none"
                         placeholder="1137 Williams Avenue"
                         value={formData.address}
-                        onChange={(e) =>
+                        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                           setFormData({ ...formData, address: e.target.value })
                         }
                         required
@@ -158,7 +158,7 @@ export default function CheckoutPage() {
                           className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-peach focus:outline-none"
                           placeholder="10001"
                           value={formData.zipCode}
-                          onChange={(e) =>
+                          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                             setFormData({ ...formData, zipCode: e.target.value })
                           }
                           required
@@ -171,7 +171,7 @@ export default function CheckoutPage() {
                           className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-peach focus:outline-none"
                           placeholder="New York"
                           value={formData.city}
-                          onChange={(e) =>
+                          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                             setFormData({ ...formData, city: e.target.value })
                           }
                           required
@@ -184,7 +184,7 @@ export default function CheckoutPage() {
                           className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-peach focus:outline-none"
                           placeholder="United States"
                           value={formData.country}
-                          onChange={(e) =>
+                          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                             setFormData({ ...formData, country: e.target.value })
                           }
                           required
@@ -208,7 +208,7 @@ export default function CheckoutPage() {
                             name="paymentMethod"
                             value="e-money"
                             checked={formData.paymentMethod === "e-money"}
-                            onChange={(e) =>
+                            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                               setFormData({
                                 ...formData,
                                 paymentMethod: e.target.value,
@@ -224,7 +224,7 @@ export default function CheckoutPage() {
                             name="paymentMethod"
                             value="cash"
                             checked={formData.paymentMethod === "cash"}
-                            onChange={(e) =>
+                            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                               setFormData({
                                 ...formData,
                                 paymentMethod: e.target.value,
@@ -248,7 +248,7 @@ export default function CheckoutPage() {
                             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-peach focus:outline-none"
                             placeholder="238521993"
                             value={formData.eMoneyNumber}
-                            onChange={(e) =>
+                            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                               setFormData({
                                 ...formData,
                                 eMoneyNumber: e.target.value,
@@ -265,7 +265,7 @@ export default function CheckoutPage() {
                             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-peach focus:outline-none"
                             placeholder="6891"
                             value={formData.eMoneyPin}
-                            onChange={(e) =>
+                            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                               setFormData({
                                 ...formData,
                                 eMoneyPin: e.target.value,

@@ -3,8 +3,14 @@ import { sendOrderConfirmationEmail } from '@/lib/resend';
 
 export async function POST(request: NextRequest) {
   try {
-    const body = await request.json();
+      const body = (await request.json()) as {
+      email: string;
+      orderNumber: string;
+      items: any[];
+      total: number;
+    };
     const { email, orderNumber, items, total } = body;
+
 
     if (!email || !orderNumber || !items || !total) {
       return NextResponse.json(
